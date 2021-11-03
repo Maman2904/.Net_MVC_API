@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{AF1743D0-4904-4F65-A2BB-E356FB6710F8}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="README.md">
+    <Files>
+      <File FileName="Views/Shared/_Layout.cshtml" Line="30" Column="15" />
+      <File FileName="Controllers/EmployeeController.cs" />
+      <File FileName="Models/Employee.cs" />
+      <File FileName="Views/Employee/AddorEdit.cshtml" />
+      <File FileName="Views/Employee/Index.cshtml" Line="7" Column="27" />
+      <File FileName="README.md" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>docker-compose.dcproj</String>
+  </DisabledProjects>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Asp.netCoreMvcCrud PreferredExecutionTarget="/Applications/Google Chrome.app" />
+</Properties>

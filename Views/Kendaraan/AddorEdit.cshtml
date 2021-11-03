@@ -1,0 +1,57 @@
+﻿@model Asp.netCoreMvcCrud.Models.Kendaraan
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h4>Kendaraan Form</h4>
+<hr />
+<div class="col-md-6">
+    <form asp-action="AddorEdit">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="nama" class="control-label"></label>
+            <input asp-for="nama" class="form-control" />
+            <span asp-validation-for="nama" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="model" class="control-label"></label>
+            <input asp-for="model" class="form-control" />
+            <span asp-validation-for="model" class="text-danger"></span>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label asp-for="merek" class="control-label"></label>
+                <input asp-for="merek" class="form-control" />
+                <span asp-validation-for="merek" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="transmisi" class="control-label"></label>
+                <input asp-for="transmisi" class="form-control" />
+                <span asp-validation-for="transmisi" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="tahun" class="control-label"></label>
+            <input asp-for="tahun" class="form-control" />
+            <span asp-validation-for="tahun" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="harga" class="control-label"></label>
+            <input asp-for="harga" class="form-control" />
+            <span asp-validation-for="harga" class="text-danger"></span>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <input type="submit" value="Submit" class="btn btn-secondary btn-block" />
+            </div>
+            <div class="form-group col-md-6">
+                <a asp-action="Index" class="btn btn-secondary btn-block"><i class="fa fa-table"></i> Back to List</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

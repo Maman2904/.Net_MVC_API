@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Asp.netCoreMvcCrud.Models.Kendaraan>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<table class="highlight">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nama)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.merek)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.transmisi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tahun)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.harga)
+            </th>
+            <th>
+                <a asp-action="AddorEdit" class="btn btn-outline-success"><i class="fa fa-plus-square"></i> Kendaraan</a>
+            
+                <a asp-action="Download" class="btn btn-outline-success"><i class="far fa-file"></i> Export Data</a>
+            
+                <a asp-action="Import" class="btn btn-outline-success"><i class="far fa-file"></i> Import Data</a>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nama)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.merek)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.transmisi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tahun)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.harga)
+            </td>
+            <td>
+                <a asp-action="AddOrEdit" asp-route-id="@item.id"><i class="fa fa-marker fa-lg"></i></a>
+                <a asp-action="Delete" asp-route-id="@item.id" class="text-danger ml-1" onclick="return confirm('Are you sure to delete this record?')"><i class="fa fa-trash-alt fa-lg"></i></a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
